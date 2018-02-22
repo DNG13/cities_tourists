@@ -67,10 +67,7 @@ On the "Cities" page after a click on a line "city-country" information with pho
 Registration and authorization from the box.
  
 The registered and authorized user has access to the administrative part (Admin tab in the navbar).
-Administrative part: Cities(Cities List with Additional Information)
-               Tourists(List of tourists with additional information)
-               Cities with tourists (List of cities with surname / names of tourists visited)
-               Tourists with the number of cities visited (List of tourists with the number of cities visited)
+Administrative part: Cities(Cities List with Additional Information), Tourists(List of tourists with additional information), Cities with tourists (List of cities with surname / names of tourists visited), Tourists with the number of cities visited (List of tourists with the number of cities visited)/
 "Tourists", Cities",
 where search is possible (search field) and sorting by columns (acs \ desc when clicking on the arrows), 
 "Add city" / "Add tourist" buttons are redirected to the creation form,
