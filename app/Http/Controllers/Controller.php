@@ -18,15 +18,9 @@ class Controller extends BaseController
         $data = $request->all();
         $orderBy = $data['order_by'] ?? 'id';
         $order = $data['order'] ?? 'asc';
-        if (!empty($data['order_by'])) {
-            unset($data['order_by']);
-        }
-        if (!empty($data['order'])) {
-            unset($data['order']);
-        }
-        if (!empty($data['_token'])) {
-            unset($data['_token']);
-        }
+        unset($data['order_by']);
+        unset($data['order']);
+        unset($data['_token']);
         $sort = [];
         $queryString = http_build_query($data);
         foreach ($sortFields as $field) {

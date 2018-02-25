@@ -22,10 +22,8 @@ class TouristController extends Controller
         $query = Tourist::select('*')
             ->orderby($request->order_by ?? 'id', $request->order ?? 'asc');
         if (!empty($keyword)) {
-            $query->where(function($q) use ($keyword) {
-                $q->where('first_name',  $keyword)
-                    ->orWhere('last_name',  $keyword);
-            });
+            $query->where('first_name',  $keyword)
+                ->orWhere('last_name',  $keyword);
         }
         $tourists = $query->paginate(20);
 

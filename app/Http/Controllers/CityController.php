@@ -22,10 +22,8 @@ class CityController extends Controller
         $query = City::select('*')
             ->orderby($request->order_by ?? 'id', $request->order ?? 'asc');
         if (!empty($keyword)) {
-            $query->where(function($q) use ($keyword) {
-                $q->where('name',  $keyword)
-                    ->orWhere('country',  $keyword);
-            });
+            $query->where('name',  $keyword)
+                ->orWhere('country',  $keyword);
         }
         $cities = $query->paginate(20);
 
